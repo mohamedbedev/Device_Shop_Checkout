@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F3F4F6;
+}
+header{
+    background-image: url(assets/background-image@2x.png);
+    padding: 80px 20px;
+    background-position: center;
+    position: relative;
+   
+}
+header>p{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;    
+    color: white;
+    position: relative;
+    top: -65px;
+}
+header>p>span{
+    background-color: #95AAD0;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 25%;
+    padding: 9px 7px;
+}
+
+.container{
+    margin: auto;
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+                        "summary contact"
+                        "confirmation continue";
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    top: 110px;
+    left: 64px;    
+    padding-bottom: 20px;
+     
+
+}
+
+/* ------------------summary----------------------- */
+.summary{
+    background-color: #D2D5DA;
+    grid-area: summary;
+    border-top-left-radius: 15px;
+    box-shadow: 1px 1px #F3F4F6;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+                        "item1 item-description1"
+                        "item2 item-description2"
+                        "item3 item-description3"
+                        "item4 item-description4";   
+}
+.item1{
+    margin: 20px 35px ;
+    padding: 10px 45px ;
+    background-color: #F3F4F6;
+    border-radius: 8px; 
+    align-content: center;
+}
+.item2{
+    margin: 20px 35px ;
+    padding: 10px 48px ;
+    background-color: #F3F4F6;
+    border-radius: 8px; 
+    align-content: center;
+}
+.item-description1, .item-description2{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.item3{
+    margin: 20px 35px ;
+    padding: 10px 25px ;
+    background-color: #F3F4F6;
+    border-radius: 8px; 
+    align-content: center; 
+    
+}
+.item-description3{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    
+}
+.item-description4{
+    margin-right: 20px;
+}
+hr{
+    text-align: center;
+    color: #6C727F;
+    width: 100%;
+    height: 1px;
+    margin-left: 30px;
+    margin-right: 60px;
+    
+}
+.item-description4>hr{
+    margin-right: 0px;
+    max-width: 90%;
+}
+.item-description-name, .item-description-price{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.item-description-name p, .item-description-price p{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+.item-description-name p:not(#name){
+    color: #6C727F;
+    font-weight: 400;
+}
+.item-description-price{
+   margin-right: 23px; 
+}
+.item-description-price p:last-child{
+    padding-left: 50px;
+}
+
+/* ------------contact------------------ */
+
+.contact{
+    background-color: #FFFFFF;
+    grid-area: contact;
+    border-top-right-radius: 15px;
+    border-bottom: none;
+    box-shadow: 1px 1px #F3F4F6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+                        "contact-item1 contact-item1"
+                        "contact-item2 contact-item2"
+                        "contact-item3 contact-item3"
+                        "contact-item4 contact-item5"
+                        "contact-item6 contact-item7"
+                        "contact-item8 contact-item8";  
+}
+.contact-item1{
+    grid-area: contact-item1;
+    height:80px;   
+}
+.contact-item1>p{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.contact-item2{
+   grid-area: contact-item2;   
+}
+.contact-item2>form, .contact-item3>form, .contact-item4>form, .contact-item5>form{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.contact-item3{
+    grid-area: contact-item3;    
+}
+
+.contact-item2 .fname, .contact-item3 .mail, .contact-item4 label, .contact-item5 label{
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #6C727F;
+      
+}
+.contact-item2>form #firstlastname, .contact-item3>form #Email{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    width: 90%;
+    margin-top: 10px;
+    background-color:#F3F4F6;
+    border: 1px solid #D2D5DA;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+.contact-item6>form #Country{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    width: 75%;
+    margin-top: 0px;
+    margin-left: 20px;
+    background-color:#F3F4F6;
+    border: 1px solid #D2D5DA;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+.contact-item4{
+    grid-area: contact-item4;    
+}
+.contact-item5{
+    grid-area: contact-item5;
+    
+}
+.contact-item6{
+    grid-area: contact-item6;
+   
+}
+.contact-item7{
+    grid-area: contact-item7;
+   
+}
+.contact-item7>form #Postal_code{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    width: 75%;
+    margin-top: 0px;
+    margin-left: 20px;
+    background-color:#F3F4F6;
+    border: 1px solid #D2D5DA;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+.contact-item8{
+    grid-area: contact-item8;    
+}
+.contact-item8>form #btn-confirmer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;  
+    width: 91%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    border-radius: 7px;
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+    border: 1px solid #1D1D1F;
+    
+}
+
+/* ------------confirmation-------------- */
+.confirmation{
+    background-color: #D2D5DA;
+    grid-area: confirmation;    
+    border-bottom: none;
+    box-shadow: 1px 1px #F3F4F6;
+    border-bottom-left-radius: 15px;
+}
+
+.confirmation-coupon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 15px 30px;
+}
+.confirmation-total-price{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 15px 30px ;
+}
+.confirmation-coupon>.cc-item-text>form input[type="text"]{
+    width: 320px;
+    padding: 12px 20px;
+    border: 1px solid #00000033;
+    border-radius: 6px;
+}
+.confirmation-coupon>.cc-item-btn form input[type="submit"]{
+    width: 143px;
+    margin-left: 15px;
+    padding: 12px 25px;
+    border: 1px solid #1D1D1F;
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.confirmation-total-price>.title{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;   
+}
+.confirmation-total-price>.title p{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+}
+.confirmation-total-price>.title p:not(#name){
+    color: #6C727F;
+    font-weight: 400;
+}
+.confirmation-total-price>.price{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.confirmation-total-price>.price p{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+}
+.confirmation-total-price>.price p:nth-child(2){
+    padding-left: 10px;
+}
+.confirmation-total-price>.price p:last-child{
+    font-weight: 600;    
+    padding-left: 0px;
+    color: #6C727F;
+}
+
+/* ------------continue------------- */
+.continue{
+    grid-area: continue;
+}
+.white-space{
+    height: 360px;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 15px;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px){
+    .container{
+        left: 50px;
+    }
+    .confirmation-coupon>.cc-item-text>form input[type="text"]{
+        width: 200px;
+    }
+    .item-description4{
+        margin-right: 35px;
+    }
+    .item-description-price{
+        margin-right: 30px; 
+    }
+    .white-space{
+        height: 213px;
+    }
+
+}
+
+
+@media screen and (max-width: 640px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+                        "summary"
+                        "confirmation"
+                        "contact"
+                        "continue" ;
+        height: min-content;
+        width:87%;
+        left: 18px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .confirmation-coupon>.cc-item-text>form input[type="text"]{
+        width: 270px;
+    }
+    .summary{
+        border-top-right-radius: 15px;
+        
+    }
+    .confirmation{
+        border-bottom-left-radius: 0px;
+    }
+    .contact{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    .white-space{
+        border-bottom-left-radius: 15px;
+        height: 220px;
+    }
+    .contact-item7>form #Postal_code{
+        margin-bottom: 20px;
+    }
+    .contact-item6>form #Country{
+        margin-bottom: 20px;
+    }
+    .confirmation-coupon>.cc-item-btn form input[type="submit"]{
+        width: 170px;
+        margin-left: 5px;
+    }
+    .item-description4{
+        margin-right: 20px;
+    }
+    .item-description-price{
+        margin-right: 25px; 
+     }
+
+}
